@@ -2,6 +2,7 @@ import { openai } from "@ai-sdk/openai";
 import VoltAgent, { Agent } from "@voltagent/core";
 import { createPinoLogger } from "@voltagent/logger";
 import honoServer from "@voltagent/server-hono";
+import { branchNameGeneratorWorkflow } from "./workflows/branch-name-generator";
 
 const logger = createPinoLogger({
 	name: "aibranch-agent",
@@ -18,4 +19,5 @@ new VoltAgent({
 	agents: { agent },
 	server: honoServer(),
 	logger,
+	workflows: { branchNameGeneratorWorkflow },
 });
