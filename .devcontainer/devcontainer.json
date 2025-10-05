@@ -1,5 +1,6 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+    "forwardPorts": [3141],
 	"features": {
 		"ghcr.io/devcontainers-extra/features/bun:1": {}
 	},
@@ -11,5 +12,6 @@
 			]
 		}
 	},
-	"postCreateCommand": "bun install"
+	"postCreateCommand": "bun install",
+    "postStartCommand": "bun run dev"
 }
