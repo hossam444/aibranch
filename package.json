@@ -5,9 +5,19 @@
   "private": true,
   "devDependencies": {
     "@biomejs/biome": "2.2.5",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/node": "^24.6.2",
+    "@voltagent/cli": "^0.1.11"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^2",
+    "@voltagent/core": "^1.1.25",
+    "@voltagent/logger": "^1.0.2",
+    "@voltagent/server-hono": "^1.0.16",
+    "ai": "^5.0.60",
+    "zod": "3"
   }
 }
