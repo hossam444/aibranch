@@ -4,15 +4,17 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun run build.ts",
-    "dev": "bun run --watch src/index.ts",
-    "start": "bun run src/index.ts"
+    "build": "wrangler build",
+    "dev": "wrangler dev --ip 0.0.0.0",
+    "start": "bun run src/index.ts",
+    "deploy": "wrangler deploy"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.5",
     "@types/bun": "latest",
     "@types/node": "^24.6.2",
-    "@voltagent/cli": "^0.1.11"
+    "@voltagent/cli": "^0.1.11",
+    "wrangler": "^4.42.0"
   },
   "peerDependencies": {
     "typescript": "^5.9.3"
@@ -22,6 +24,7 @@
     "@voltagent/core": "^1.1.25",
     "@voltagent/logger": "^1.0.2",
     "@voltagent/server-hono": "^1.0.16",
+    "@voltagent/serverless-hono": "^1.0.3",
     "ai": "^5.0.60",
     "zod": "3"
   }

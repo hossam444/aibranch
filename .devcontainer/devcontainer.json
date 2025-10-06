@@ -1,6 +1,6 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:22",
-    "forwardPorts": [3141],
+    "forwardPorts": [8787],
 	"features": {
 		"ghcr.io/devcontainers-extra/features/bun:1": {}
 	},
