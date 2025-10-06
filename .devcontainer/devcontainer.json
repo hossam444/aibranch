@@ -1,14 +1,16 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+	"image": "mcr.microsoft.com/devcontainers/universal:4",
     "forwardPorts": [8787],
 	"features": {
-		"ghcr.io/devcontainers-extra/features/bun:1": {}
+		"ghcr.io/devcontainers-extra/features/bun:1": {},
+		"ghcr.io/devcontainers/features/rust:1": {}
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"oven.bun-vscode",
-				"biomejs.biome"
+				"biomejs.biome",
+				"rust-lang.rust-analyzer"
 			]
 		}
 	},
