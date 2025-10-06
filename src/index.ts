@@ -1,5 +1,5 @@
 import { openai } from "@ai-sdk/openai";
-import VoltAgent, { Agent } from "@voltagent/core";
+import VoltAgent, { Agent, VoltOpsClient } from "@voltagent/core";
 import { createPinoLogger } from "@voltagent/logger";
 import serverlessHono from "@voltagent/serverless-hono";
 import { branchNameGeneratorWorkflow } from "./workflows/branch-name-generator";
@@ -9,6 +9,8 @@ type Env = {
 	VOLTAGENT_PUBLIC_KEY?: string;
 	VOLTAGENT_SECRET_KEY?: string;
 };
+
+const getEnv = (key: keyof Env): string => process.env[key] ?? "";
 
 const logger = createPinoLogger({
 	name: "aibranch-agent",
@@ -26,6 +28,10 @@ const voltAgent = new VoltAgent({
 	serverless: serverlessHono(),
 	logger,
 	workflows: { branchNameGeneratorWorkflow },
+	voltOpsClient: new VoltOpsClient({
+		publicKey: getEnv("VOLTAGENT_PUBLIC_KEY"),
+		secretKey: getEnv("VOLTAGENT_SECRET_KEY"),
+	}),
 });
 
 export default voltAgent.serverless().toCloudflareWorker();
