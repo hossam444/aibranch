@@ -10,7 +10,8 @@
 			"extensions": [
 				"oven.bun-vscode",
 				"biomejs.biome",
-				"rust-lang.rust-analyzer"
+				"rust-lang.rust-analyzer",
+				"esbenp.prettier-vscode"
 			]
 		}
 	},
