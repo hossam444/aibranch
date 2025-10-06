@@ -94,6 +94,7 @@ jobs:
     - if: ${{ ! matrix.cross }}
       run: cargo build --release --target ${{ matrix.target }}
 
-    - run: gh release upload ${{ github.ref_name }} ./target/${{ matrix.target }}/release/cli${{ matrix.ext }}#aibranch-${{ matrix.target }}${{ matrix.ext }}
+    - run: mv target/${{ matrix.target }}/release/cli${{ matrix.ext }} target/${{ matrix.target }}/release/aibranch-${{ matrix.target }}${{ matrix.ext }}
+    - run: gh release upload ${{ github.ref_name }} ./target/${{ matrix.target }}/release/aibranch-${{ matrix.target }}${{ matrix.ext }}#aibranch-${{ matrix.target }}${{ matrix.ext }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
