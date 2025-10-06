@@ -162,6 +162,7 @@ dependencies = [
  "clap",
  "reqwest",
  "serde",
+ "tokio",
 ]
 
 [[package]]
