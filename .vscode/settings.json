@@ -2,5 +2,9 @@
 	"[jsonc][typescript]": {
 		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[rust]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "rust-lang.rust-analyzer"
 	}
 }
