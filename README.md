@@ -1,4 +1,4 @@
-# aibranch
+![aibranch](https://socialify.git.ci/sakkeam/aibranch/image?language=1&owner=1&name=1&stargazers=1&theme=Light)
 
 An AI-powered Git branch name generator that follows the [Conventional Branch](https://github.com/conventional-branch/conventional-branch) naming convention. This tool analyzes your Git diff and automatically generates descriptive, standardized branch names.
 
