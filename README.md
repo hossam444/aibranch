@@ -195,4 +195,4 @@ Contributions are welcome! Please feel free to submit issues or pull requests.
 
 ---
 
-Built with ❤️ using [Bun](https://bun.sh), [Rust](https://rust-lang.org), [VoltAgent](https://voltagent.ai), and [Cloudflare Workers](https://workers.cloudflare.com)
+Built with ❤️ using [Bun](https://bun.sh), [Rust](https://rust-lang.org), [VoltAgent](https://voltagent.dev), and [Cloudflare Workers](https://workers.cloudflare.com)
