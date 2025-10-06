@@ -60,25 +60,40 @@ jobs:
           - os: ubuntu-latest
             target: aarch64-unknown-linux-musl
             ext: ""
+            cross: true
           - os: ubuntu-latest
             target: x86_64-unknown-linux-musl
             ext: ""
+            cross: true
           - os: windows-latest
             target: x86_64-pc-windows-msvc
             ext: .exe
+            cross: false
           - os: macos-latest
             target: aarch64-apple-darwin
             ext: ""
+            cross: false
           - os: macos-latest
             target: x86_64-apple-darwin
             ext: ""
+            cross: false
 
     steps:
     - uses: actions/checkout@v4
     - uses: actions-rust-lang/setup-rust-toolchain@v1
       with:
         target: ${{ matrix.target }}
-    - run: cargo build --release --target ${{ matrix.target }}
+
+    - if: ${{ matrix.cross }}
+      uses: cargo-bins/cargo-binstall@main
+    - if: ${{ matrix.cross }}
+      run: cargo binstall --git https://github.com/cross-rs/cross.git --no-confirm cross
+    - if: ${{ matrix.cross }}
+      run: cross build --release --target ${{ matrix.target }}
+
+    - if: ${{ ! matrix.cross }}
+      run: cargo build --release --target ${{ matrix.target }}
+
     - run: gh release upload ${{ github.ref_name }} ./target/${{ matrix.target }}/release/cli${{ matrix.ext }}#aibranch-${{ matrix.target }}${{ matrix.ext }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
